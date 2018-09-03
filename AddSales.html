@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'/>
+		<meta name='author' content='Johsua R Clarke'/>
+		<title>PHP - Add Sales Recored</title>
+	</head>
+	<body>
+		<header>
+			<h1>People Health Pharmacy</h1>
+		</header>
+		<nav>
+		<!--TODO:Fill up as other pages cerated-->
+		</nav>
+		<form>
+			<fieldset>
+				<p>
+					<label for='ItemName'>Item</label>
+					<input id='ItemName' name='ItemName' type='text' required='required' pattern="^[a-zA-Z]+$"/>
+				</p>
+				<p>
+					<label for='Price'>Price</label>
+					<input id='Price' name='Price' type='text' required='required' pattern="\d"/>
+				</p>
+				<p>
+					<label for='Quantiy'>Quantiy</label>
+					<input id='Quantiy' name='Quantiy' type='text' required='required' pattern="\d"/>
+				</p>
+				<p>
+					<label for='Date'>Date Sold</label>
+					<input id='Date' name='Date' type='date' required='required'/>
+				</p>
+				<p>
+				<span class="errortxt" id="statetxt"></span>
+				</p>
+			</fieldset>
+		</form>
+	</body>
+</html>

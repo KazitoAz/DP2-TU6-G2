@@ -21,7 +21,7 @@
 		echo "<p>Database connection failure</p>";
 	} else {
 		$sql_table="inventory";
-		$query = "select name, quantity, price FROM inventory ORDER BY name";
+		$query = "select name, quantity, price, date FROM inventory ORDER BY date";
 		$result = mysqli_query($conn, $query);
 		
 		if(!$result){
@@ -32,6 +32,7 @@
 			    ."<th scope=\"col\">Name</th>\n"
 				."<th scope=\"col\">Quantity</th>\n"
 				."<th scope=\"col\">Price</th>\n"
+				."<th scope=\"col\">Date</th>\n"
 				."</tr>\n";
 				
 			while ($row = mysqli_fetch_assoc($result)){
@@ -39,6 +40,7 @@
 				echo "<td>",$row["name"],"</td>\n";
 				echo "<td>",$row["quantity"],"</td>\n";
 				echo "<td>",$row["price"],"</td>\n";
+				echo "<td>",$row["date"],"</td>\n";
 				echo "</tr>\n";
 			}
 		echo "</table>\n";

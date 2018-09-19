@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Display Weekly Sales Record</title>
+
+<meta charset="utf-8" />
+<meta name="description" content="display weekly sales record html page"  />
+<meta name="keywords" content="connect the database and html page" />
+
+
+</head>
+<body>
+	<h1>Display Weekly Sales Record</h1>
+	<nav>
+	   
+	   <fieldset id="field1">
+	   <legend>Menu</legend>
+	   <p><h3>Sales Record</h3>
+	   <a href="AddSalesRecord.html">Add</a><br />
+	   <a href="EditSalesRecord.html">Edit</a><br />
+	   <a href="DeleteSalesRecord.html">Delete</a><br />
+	   <a href="DisplayMonthlyRecord.html">Display Monthly</a><br />
+	   <a href="DisplayWeeklySalesRecord.html">Display Weekly</a>
+	   
+	   <h3>Inventory</h3>
+	   <a href="AddInventory.html">Add</a><br />
+	   <a href="EditInventory.html">Edit</a><br />
+	   <a href="DeleteInventory.html">Delete</a><br />
+	   <a href="ShowInventory.html">Display Inventory</a>
+	   
+	   <h3>Predict</h3>
+	   <a href="PredictMonthly.html">Monthly</a><br />
+	   <a href="PredictWeekly.html">Weekly</a>
+	   </p>
+	   
+	   </fieldset>
+	</nav>
+	<form method="post" action="displayweekly.php">
+	<fieldset>
+	<p class="row">	<label for="chooseweek">The Week you want display: </label>
+		<input type="text" name="chooseweek" id="chooseweek" /></p>
+	
+	
+		<p>	<input type="submit" value="Display" /></p>
+	
+	</fieldset>
+	</form>
+</body>
+</html>

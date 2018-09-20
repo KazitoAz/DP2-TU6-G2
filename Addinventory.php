@@ -4,8 +4,8 @@
 		<meta charset='utf-8'/>
 		<meta name='author' content='Johsua R Clarke'/>
 		<link href="style/style.css" rel="stylesheet"/>
-		<script src="scripts/AddSales.js"></script>
-		<title>PHP - Add Sales Recored</title>
+		<script src="scripts/AddInventory.js"></script>
+		<title>PHP - Add Inventory Recored</title>
 	</head>
    <body>
 <?php

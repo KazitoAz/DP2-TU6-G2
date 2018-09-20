@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Display Weekly Sales Record</title>
+<title>Show Weekly Sales Report</title>
 
 <meta charset="utf-8" />
-<meta name="description" content="display weekly sales record html page"  />
+<meta name="description" content="show weekly sales record html page"  />
 <meta name="keywords" content="connect the database and html page" />
 
 
 </head>
 <body>
-	<h1>Display Weekly Sales Record</h1>
+	<h1>Show Weekly Sales Report</h1>
 	<nav>
 	   
 	   <fieldset id="field1">
@@ -35,13 +35,23 @@
 	   
 	   </fieldset>
 	</nav>
-	<form method="post" action="displayweekly.php">
+	<form method="post" action="show_weekly_salesreport.php">
 	<fieldset>
-	<p class="row">	<label for="chooseweek">The Week you want display: </label>
-		<input type="text" name="chooseweek" id="chooseweek" /></p>
+	<legend>Select week for showing</legend>
+		<p class="row">	<label for="week">number of week: </label>
+			<input type="text" name="week" id="week" /></p>
+		
+		<p>	<input type="submit" value="Confirm week" /></p>
 	
+	<h2>Or you can choose date</h2>
 	
-		<p>	<input type="submit" value="Display" /></p>
+	<legend>Select week for showing</legend>
+		<p class="row">	<label for="begin_date">The begin date: </label>
+			<input type="text" name="begin_date" id="begin_date" /></p>
+		<p class="row">	<label for="end_date">The end date: </label>
+			<input type="text" name="end_date" id="end_date" /></p>
+		
+		<p>	<input type="submit" value="Confirm date" /></p>
 	
 	</fieldset>
 	</form>

@@ -20,8 +20,8 @@
 	if (!$conn) {
 		echo "<p>Database connection failure</p>";
 	} else {
-		$sql_table="inventory";
-		$query = "select name, quantity, price, date FROM inventory ORDER BY date";
+		$sql_table="Inventory";
+		$query = "select product_name, quantity, supplier, contact_number, address FROM Inventory ORDER BY product_name";
 		$result = mysqli_query($conn, $query);
 		
 		if(!$result){
@@ -29,18 +29,20 @@
 		} else {
 			echo "<table border=\"1\">\n";
 			echo "<tr>\n "
-			    ."<th scope=\"col\">Name</th>\n"
+			    ."<th scope=\"col\">Product Name</th>\n"
 				."<th scope=\"col\">Quantity</th>\n"
-				."<th scope=\"col\">Price</th>\n"
-				."<th scope=\"col\">Date</th>\n"
+				."<th scope=\"col\">Supplier</th>\n"
+				."<th scope=\"col\">Contact Number</th>\n"
+				."<th scope=\"col\">Address</th>\n"
 				."</tr>\n";
 				
 			while ($row = mysqli_fetch_assoc($result)){
 				echo "<tr>\n";
-				echo "<td>",$row["name"],"</td>\n";
+				echo "<td>",$row["product_name"],"</td>\n";
 				echo "<td>",$row["quantity"],"</td>\n";
-				echo "<td>",$row["price"],"</td>\n";
-				echo "<td>",$row["date"],"</td>\n";
+				echo "<td>",$row["supplier"],"</td>\n";
+				echo "<td>",$row["contact_number"],"</td>\n";
+				echo "<td>",$row["address"],"</td>\n";
 				echo "</tr>\n";
 			}
 		echo "</table>\n";

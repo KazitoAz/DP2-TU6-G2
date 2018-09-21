@@ -38,9 +38,9 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Inventory` (
   `ProductName` VARCHAR(15) NOT NULL,
   `Quantity` INT(4) NOT NULL,
   `Supplier` VARCHAR(20) NOT NULL,
-  `Contact Number` INT(15) NOT NULL,
+  `ContactNumber` INT(15) NOT NULL,
   `Address` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`Product Name`))
+  PRIMARY KEY (`ProductName`))
 ENGINE = InnoDB;
 
 

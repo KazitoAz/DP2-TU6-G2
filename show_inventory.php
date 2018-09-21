@@ -45,34 +45,6 @@
 	?>
 	</form>
 
-  <table>
-  <thead>
-   <tr>
-    <th>Product Name</th>
-	<th>Quantity</th>
-	<th>Price</th>
-	<th>Date</th>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <th> </th>
-    <td> </td>
-	<td> </td>
-	<td> </td>
-	<td> </td>
-	<td> </td>
-   </tr>
-   <tr>
-    <th> </th>
-    <td> </td>
-	<td> </td>
-	<td> </td>
-	<td> </td>
-	<td> </td>
-   </tr>
-  </tbody>
-  </table>
 
 
   <fieldset>

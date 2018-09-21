@@ -11,7 +11,10 @@
 </head>
 
 <body>
- <?php>
+ <?php 
+ include_once "header.inc";
+include_once "nav.inc"
+ ?>
 	<article>
 	    <section id="info">
 		    <h2>Basic information</h2>

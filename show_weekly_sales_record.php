@@ -7,47 +7,84 @@
  <title>Display Weekly Sales Record</title>
 </head>
 <body>
-<h1>Weekly Sales Record</h1>
 <?php
+    include("hearder.inc");
+	include("nav.inc");
+	?>
+	
+	<form method="post" action="show_weekly_sales_record.php">
+	<fieldset>
+	<legend>Search the week for showing</legend>
+		<p class="row">	<label for="week">The number of week:</label>
+			<input type="text" name="week" id="week" /></p>
+	
+		<p>	<input type="submit" value="Search Sales Record" /></p>
+	
+	</fieldset>
+	<?php
     require_once ("settings.php");
 	
 	$conn = @mysqli_connect($host,
-	  $user, 
-	  $pwd, 
-	  $sql_db
+	    $user,
+		$pwd,
+		$sql_db
 	);
 	
-	if (!$conn) {
-		echo "<p>Database connection failure</p>";
-	} else {
-		$sql_table="SalesRecord";
-		$query = "select product_name, quantity, price, date FROM SalesRecord ORDER BY date";
-		$result = mysqli_query($conn, $query);
-		
-		if(!$result){
-			echo "<p>Something is wrong with ", $query, "</p>";
+	$name = trim($_POST["product_name"]);
+	$quantity = trim($_POST["quantity"]);
+	$supplier = trim($_POST["supplier"]);
+	$contact = trim($_POST["contact"]);
+	$address = trim($_POST["address"]);
+	
+	$query = "insert into $sql_table (product_name, quantity, supplier, contact, address) values ('$name', '$quantity', '$supplier', '$contact', 'address')";
+	
+	    $result = mysqli_query($conn, $query);
+		if(!$result) {
+			echo "<p class=\"wrong\">Something is wrong with",   $query,"</p>";
 		} else {
-			echo "<table border=\"1\">\n";
-			echo "<tr>\n "
-			    ."<th scope=\"col\">Product Name</th>\n"
-				."<th scope=\"col\">Quantity</th>\n"
-				."<th scope=\"col\">Price</th>\n"
-				."<th scope=\"col\">Date</th>\n"
-				."</tr>\n";
-				
-			while ($row = mysqli_fetch_assoc($result)){
-				echo "<tr>\n";
-				echo "<td>",$row["product_name"],"</td>\n";
-				echo "<td>",$row["quantity"],"</td>\n";
-				echo "<td>",$row["price"],"</td>\n";
-				echo "<td>",$row["date"],"</td>\n";
-				echo "</tr>\n";
-			}
-		echo "</table>\n";
-		mysqli_free_result($result);
+			echo "<p class=\"ok\">Successfully searching weekly sales record</p>";
 		}
+		
 		mysqli_close($conn);
-	}
-?>
+	?>
+	</form>
+
+  <table>
+  <thead>
+   <tr>
+    <th>Product Name</th>
+	<th>Quantity</th>
+	<th>Supplier</th>
+	<th>Contact</th>
+	<th>Address</th>
+   </tr>
+  </thead>
+  <tbody>
+   <tr>
+    <th> </th>
+    <td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+   </tr>
+   <tr>
+    <th> </th>
+    <td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+   </tr>
+  </tbody>
+  </table>
+
+
+
+
+</body>
+</html>
 </body>
 </html>

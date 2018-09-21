@@ -14,7 +14,7 @@
 	include("nav.inc");
 	?>
 	
-	<form method="post" action="show_weekly_sales_record.php">
+	<form method="post" action="view_sales.php">
 	<fieldset>
 	<legend>Search the week for showing</legend>
 		<p class="row">	<label for="week">The number of week:</label>

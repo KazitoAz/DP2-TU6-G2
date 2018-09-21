@@ -22,7 +22,7 @@ USE `mydb` ;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`SalesRecord` (
   `No.` INT(3) NOT NULL AUTO_INCREMENT,
-  `Product Name` VARCHAR(15) NOT NULL,
+  `ProductName` VARCHAR(15) NOT NULL,
   `Quantity` INT(4) NOT NULL,
   `Price` INT(4) NOT NULL,
   `Date` DATE NOT NULL,
@@ -35,7 +35,7 @@ ENGINE = InnoDB;
 -- Table `mydb`.`Inventory`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`Inventory` (
-  `Product Name` VARCHAR(15) NOT NULL,
+  `ProductName` VARCHAR(15) NOT NULL,
   `Quantity` INT(4) NOT NULL,
   `Supplier` VARCHAR(20) NOT NULL,
   `Contact Number` INT(15) NOT NULL,

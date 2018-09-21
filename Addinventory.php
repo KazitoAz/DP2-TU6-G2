@@ -22,23 +22,24 @@ include_once "nav.inc";
 					<input id='ItemName' name='ItemName' type='text' required='required' pattern="^[a-zA-Z]+$"/>
 				</p>
 				<p>
-					<label for='Unit Cost'>Unit Cost</label>
-					<input id='Unit Cost' name='Unit Cost' type='text' required='required' pattern="\d"/>
+					<label for='Supplier'>Supplier</label>
+					<input id='Supplier' name='Supplier' type='text' required='required' pattern="\d"/>
 				</p>
 				<p>
-				<label for='Unit Cost'>Total Cost</label>
-					<input id='Unit Cost' name='Unit Cost' type='text' required='required' pattern="\d"/>
+				
+				    <label for='ContactNumber'>Contact Number </label>
+					<input id='ContactNumber' name='ContactNumber' type='text' required='required'/>
+				</p>
+				<p>
+				<label for='Address'>Address</label>
+					<input id='Address' name='Address' type='text' required='required' pattern="\d"/>
 				</p>
 				<p>
 				
 					<label for='Quantiy'>Quantiy</label>
 					<input id='Quantiy' name='Quantiy' type='text' required='required' pattern="\d"/>
 				</p>
-				<p>
 				
-				    <label for='Date'>Delivered date </label>
-					<input id='Date' name='Date' type='date' required='required'/>
-				</p>
 				<p>
 				<span class="errortxt" id="statetxt"></span>
 				</p>

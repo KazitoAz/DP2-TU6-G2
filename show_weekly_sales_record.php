@@ -5,6 +5,8 @@
  <meta name="description" content="Display Weekly sales record" />
  <meta name="keywords" content="display" />
  <title>Display Weekly Sales Record</title>
+ <link href="style/style.css" rel="stylesheet"/>
+  <script src="scripts/showSales.js"></script>
 </head>
 <body>
 <?php

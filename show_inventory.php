@@ -25,13 +25,7 @@
 	
 	</fieldset>
 	<?php
-    require_once ("settings.php");
-	
-	$conn = @mysqli_connect($host,
-	    $user,
-		$pwd,
-		$sql_db
-	);
+   include_once("db.php");
 	
 	$name = trim($_POST["product_name"]);
 	$quantity = trim($_POST["quantity"]);

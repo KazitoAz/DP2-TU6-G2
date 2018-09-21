@@ -13,6 +13,8 @@
 		<li><a href ="edit_inventory.php" title="Edit inventory record" id="nav">Edit</a></li>
 		<li><a href ="show_inventory.php" title="View inventory records" id="nav">View</a></li>
 		
+		<li><a href ="homepage.php" title="home" id="nav">home</a></li>
+		
 		</ul>
 		</nav>";
 ?>

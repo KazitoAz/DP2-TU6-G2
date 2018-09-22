@@ -39,6 +39,18 @@ include_once "nav.inc";
 					<label for='Quantiy'>Quantiy</label>
 					<input id='Quantiy' name='Quantiy' type='text' required='required' pattern="\d"/>
 				</p>
+				<p>
+					<label for='Unit Cost'>Unit Cost</label>
+					<input id='Unit Cost' name='Unit Cost' type='text' required='required' pattern="\d"/>
+				</p>
+				<p>
+				<label for='Total Cost'>Total Cost</label>
+					<input id='Total Cost' name='Total Cost' type='text' required='required' pattern="\d"/>
+				</p>
+				<p>
+				<label for='Date of delivery'>Date of delivery </label>
+					<input id='Date of delivery' name='Date of delivery' type='text' required='required'/>
+				</p>
 				
 				<p>
 				<span class="errortxt" id="statetxt"></span>

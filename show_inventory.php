@@ -32,6 +32,9 @@
 				."<th scope=\"col\">Supplier</th>\n"
 				."<th scope=\"col\">Contact Number</th>\n"
 				."<th scope=\"col\">Address</th>\n"
+				."<th scope=\"col\">Unit Cost</th>\n"
+				."<th scope=\"col\">Total Cost</th>\n"
+				."<th scope=\"col\">Date of delivery</th>\n"
 				."</tr>\n";
 				
 			while ($row = mysqli_fetch_assoc($result)){
@@ -41,6 +44,9 @@
 				echo "<td>",$row["Supplier"],"</td>\n";
 				echo "<td>",$row["Contact Number"],"</td>\n";
 				echo "<td>",$row["Address"],"</td>\n";
+				echo "<td>",$row["Unit Cost"],"</td>\n";
+				echo "<td>",$row["Total Cost"],"</td>\n";
+				echo "<td>",$row["Date of delivery"],"</td>\n";
 				echo "</tr>\n";
 			}
 		echo "</table>\n";

@@ -4,33 +4,27 @@
 		<meta charset='utf-8'/>
 		<meta name='author' content='Johsua R Clarke'/>
 		<link href="style/style.css" rel="stylesheet"/>
-<<<<<<< HEAD
 		<script src="scripts/AddInventory.js"></script>
-=======
 		<script src="scripts/EditInventory.js"></script>
->>>>>>> EditInventoryRecordFrontEnd
 		<title>PHP - Edit Inventory Recored</title>
 	</head>
    <body>
 <?php
-include_once "header.inc";
-include_once "nav.inc";
+    include("header.inc");
+	include("nav.inc");
+	
+	include("inventoryData.inc");	
 ?>
-<<<<<<< HEAD
+
 <h2>Edit Inventory</h2>
 
 		<span id="list">
 		</span>
 
-=======
 
 <span id ="List"></span>
->>>>>>> EditInventoryRecordFrontEnd
-		<form>
+		<form action="db_EditInventory.php" method="post">
 			<fieldset>
-				<p>
-				<label for='ItemName'>Edit Inventory </label>
-				<p>
 					<label for='ItemName'>Item</label>
 					<input id='ItemName' name='ItemName' type='text' required='required' pattern="^[a-zA-Z]+$"/>
 				</p>
@@ -39,42 +33,25 @@ include_once "nav.inc";
 					<input id='Supplier' name='Supplier' type='text' required='required' pattern="\d"/>
 				</p>
 				<p>
-<<<<<<< HEAD
 				
 				    <label for='ContactNumber'>Contact Number </label>
 					<input id='ContactNumber' name='ContactNumber' type='text' required='required'/>
 				</p>
 				<p>
 				<label for='Address'>Address</label>
-					<input id='Address' name='Address' type='text' required='required' pattern="\d"/>
-=======
-				<label for='ContactNumber'>Contact Number</label>
-					<input id='ContactNumber' name='ContactNumber' type='text' required='required' pattern="\d"/>
->>>>>>> EditInventoryRecordFrontEnd
-				</p>
-				<p>
-				
-					<label for='Quantiy'>Quantiy</label>
-					<input id='Quantiy' name='Quantiy' type='text' required='required' pattern="\d"/>
-				</p>
-<<<<<<< HEAD
-				
-=======
-				<p>
-				
-				    <label for='Address'>Address </label>
 					<input id='Address' name='Address' type='text' required='required'/>
 				</p>
->>>>>>> EditInventoryRecordFrontEnd
+				<p>
+				
+					<label for='Quantiy'>Quantity</label>
+					<input id='Quantiy' name='Quantity' type='text' required='required' pattern="\d"/>
+				</p>
+				
 				<p>
 				<span class="errortxt" id="statetxt"></span>
 				</p>
 				<p>
-<<<<<<< HEAD
-				<input type="add" value="Add"/>
-=======
-				<input type="submit" value="Add"/>
->>>>>>> EditInventoryRecordFrontEnd
+    			<button id="editbtn" class="btn btn-warning" type="submit" name="submit" value="editInventory">Add</button>				
 				<input type="reset" value="Reset Form"/>
 				</p>
 			</fieldset>

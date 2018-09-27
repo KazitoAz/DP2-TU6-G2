@@ -9,25 +9,29 @@
 	</head>
    <body>
 <?php
-include_once "header.inc";
-include_once "nav.inc";
-?>
+    include("header.inc");
+	include("nav.inc");
+	
+	include("salesData.inc");		
+?>	
 <h2>Edit Sales Record</h2>
 
 		<span id="list1">
 		</span>
 
-		<form>
+		<form action="db_EditSales.php" method="post">
 			<fieldset>
 				<p>
-				<label for='ProductName'>Edit SalesRecord </label>
+					<label for='Index'>Index</label>
+					<input id='Index' name='Index' type='text' required='required' pattern="\d"/>
+				</p>
 				<p>
 					<label for='ProductName'>Product</label>
 					<input id='ProductName' name='ProductName' type='text' required='required' pattern="^[a-zA-Z]+$"/>
 				</p>
 				<p>
-					<label for='Quantiy'>Quantiy</label>
-					<input id='Quantiy' name='Quantiy' type='text' required='required' pattern="\d"/>
+					<label for='Quantity'>Quantity</label>
+					<input id='Quantity' name='Quantity' type='text' required='required' pattern="\d"/>
 				</p>
 				<p>
 				
@@ -36,16 +40,14 @@ include_once "nav.inc";
 				</p>
 				<p>
 				<label for='Date'>Date</label>
-					<input id='Date' name='Date' type='text' required='required' pattern="(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}"/>
+					<input id='Date' name='Date' type='date' required='required' pattern="(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}"/>
 				</p>
-				<p>
-				
-				
+				<p>								
 				<p>
 				<span class="errortxt" id="statetxt"></span>
 				</p>
 				<p>
-				<input type="add" value="Add"/>
+    			<button id="editbtn" class="btn btn-warning" type="submit" name="submit" value="editSales">Edit</button>				
 				<input type="reset" value="Reset Form"/>
 				</p>
 			</fieldset>

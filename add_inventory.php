@@ -11,9 +11,11 @@
 <?php
 include_once "header.inc";
 include_once "nav.inc";
+
+include("inventoryData.inc");		
 ?>
 
-		<form>
+		<form action="db_AddInventory.php" method="post">
 			<fieldset>
 				<p>
 				<label for='ItemName'>Add Inventory </label>
@@ -32,19 +34,19 @@ include_once "nav.inc";
 				</p>
 				<p>
 				<label for='Address'>Address</label>
-					<input id='Address' name='Address' type='text' required='required' pattern="\d"/>
+					<input id='Address' name='Address' type='text' required='required'/>
 				</p>
 				<p>
 				
-					<label for='Quantiy'>Quantiy</label>
-					<input id='Quantiy' name='Quantiy' type='text' required='required' pattern="\d"/>
+					<label for='Quantiy'>Quantity</label>
+					<input id='Quantiy' name='Quantity' type='text' required='required' pattern="\d"/>
 				</p>
 				
 				<p>
 				<span class="errortxt" id="statetxt"></span>
 				</p>
 				<p>
-				<input type="add" value="Add"/>
+    			<button id="addbtn" class="btn btn-warning" type="submit" name="submit" value="addsales">Add</button>				
 				<input type="reset" value="Reset Form"/>
 				</p>
 			</fieldset>

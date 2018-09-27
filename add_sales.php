@@ -8,9 +8,13 @@
 		<title>PHP - Add Sales Recored</title>
 	</head>
 	<body>
-<?php include_once "header.inc"
-include_once "nav.inc"?>
-		<form>
+<?php 
+include_once "header.inc";
+include_once "nav.inc";
+	
+include("salesData.inc");			
+?>
+		<form action="db_AddSales.php" method="post">
 			<fieldset>
 				<p>
 					<label for='ItemName'>Item</label>
@@ -21,8 +25,8 @@ include_once "nav.inc"?>
 					<input id='Price' name='Price' type='text' required='required' pattern="\d"/>
 				</p>
 				<p>
-					<label for='Quantiy'>Quantiy</label>
-					<input id='Quantiy' name='Quantiy' type='text' required='required' pattern="\d"/>
+					<label for='Quantiy'>Quantity</label>
+					<input id='Quantiy' name='Quantity' type='text' required='required' pattern="\d"/>
 				</p>
 				<p>
 					<label for='Date'>Date Sold</label>
@@ -32,7 +36,7 @@ include_once "nav.inc"?>
 				<span class="errortxt" id="statetxt"></span>
 				</p>
 				<p>
-				<input type="add" value="Add"/>
+    			<button id="addbtn" class="btn btn-warning" type="submit" name="submit" value="addsales">Add</button>				
 				<input type="reset" value="Reset Form"/>
 				</p>
 			</fieldset>

@@ -2,6 +2,8 @@
 	echo "		
 	<nav>
 		<ul>
+		<li><a href ="homepage.php" title="home" id="nav">home</a></li>
+		
 		<li><h3>Sales</h3></li>
 		<li><a href ="add_sales.php" title="Add sales record" id="nav">Add</a></li>
 		<li><a href ="delete_sales.php" title="Delete sales record" id="nav">Delete</a></li>
@@ -13,7 +15,7 @@
 		<li><a href ="edit_inventory.php" title="Edit inventory record" id="nav">Edit</a></li>
 		<li><a href ="show_inventory.php" title="View inventory records" id="nav">View</a></li>
 		
-		<li><a href ="homepage.php" title="home" id="nav">home</a></li>
+		
 		
 		</ul>
 		</nav>";

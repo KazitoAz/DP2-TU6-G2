@@ -13,7 +13,7 @@ include_once "header.inc";
 include_once "nav.inc";
 ?>
 
-		<form action="Predict_monthly_sales_record.php" method="post">
+		<form action="Predict_monthly_sales_record_fe.php" method="post">
 			<fieldset>
 				<p>
 				<label for='ItemName'>Choose Item that you want</label>
@@ -32,5 +32,17 @@ include_once "nav.inc";
 				</p>
 			</fieldset>
 		</form>
+
+<?php 
+include_once("db.php"); 
+if(isset($_POST["submit"]))
+    {
+           $n = $_POST["productname"];
+
+           $query="Select Average(quantity) as "Monthly Sales in furture" from  WHERE productname='$n'";
+?>
+
+
+
    </body>
 </html>

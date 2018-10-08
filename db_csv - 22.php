@@ -7,7 +7,10 @@ $csv_header = ['ItemName','Price','Quantity','Date'];
            $p = $_POST["Price"];
            $q = $_POST["Quantity"];
            $d = $_POST["Date"];
+$csv_body= [
+ ['amoxicillin','15','18','02/11/18'],
 
+];
 		   
 			$sql = ("INSERT INTO salesrecord (ProductName, Quantity, Price, Date) VALUES ('$in','$q','$p','$d')");
 			$qury = mysqli_query($dbconn, $sql);

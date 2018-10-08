@@ -14,7 +14,9 @@
 		<li><a href ="delete_inventory.php" title="Delete inventory record" id="nav">Delete</a></li>
 		<li><a href ="edit_inventory.php" title="Edit inventory record" id="nav">Edit</a></li>
 		<li><a href ="show_inventory.php" title="View inventory records" id="nav">View</a></li>
-		
+		<li><h3>Predict Monthly Sales Record</h3></li>
+		<li><a href ="predict_monthly_sales_record_fe.php" title="Predict for one item" id="nav">One Item</a></li>
+		<li><a href ="predict_monthly_sales_record_for_similaritem.php" title="Predict for one kind" id="nav">One Kind</a></li>
 		
 		
 		</ul>

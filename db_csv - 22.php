@@ -15,7 +15,7 @@ $csv_body= [
 			$sql = ("INSERT INTO salesrecord (ProductName, Quantity, Price, Date) VALUES ('$in','$q','$p','$d')");
 			$qury = mysqli_query($dbconn, $sql);
 		$csv_body =$qury
-$fp = fopen('salesrecord.csv','a');
+$fp = fopen('monthlysalesrecord.csv','a');
 $header = implode(',', $csv_header) . PHP_EOL;
 
 $content = '';

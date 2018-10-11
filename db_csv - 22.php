@@ -1,7 +1,7 @@
 <?php include_once("db_Connection.php"); ?>
 
 <?php
-
+$fp = fopen('monthlysalesrecord.csv','a');
 $csv_header = ['ItemName','Price','Quantity','Date'];
  $in = $_POST["ItemName"];
            $p = $_POST["Price"];
@@ -15,7 +15,7 @@ $csv_body= [
 			$sql = ("INSERT INTO salesrecord (ProductName, Quantity, Price, Date) VALUES ('$in','$q','$p','$d')");
 			$qury = mysqli_query($dbconn, $sql);
 		$csv_body =$qury
-$fp = fopen('monthlysalesrecord.csv','a');
+
 $header = implode(',', $csv_header) . PHP_EOL;
 
 $content = '';

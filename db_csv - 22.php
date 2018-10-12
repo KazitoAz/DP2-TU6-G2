@@ -8,7 +8,7 @@ $csv_header = ['ItemName','Price','Quantity','Date'];
            $q = $_POST["Quantity"];
            $d = $_POST["Date"];
 $csv_body= [
- ['amoxicillin','15','18','02/11/18'],
+ ['$in','$p',' $q','$d'],
 
 ];
 		   

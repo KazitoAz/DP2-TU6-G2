@@ -7,6 +7,7 @@
   <meta name="description" content="HomePage" />
   <meta name="keywords" content="HTML5, CSS layout" />
   <meta name="author" content="XUANZHE FENG"  />
+  <link href="style/style.css" rel="stylesheet"/>
   <title>Home Page</title>
 </head>
 

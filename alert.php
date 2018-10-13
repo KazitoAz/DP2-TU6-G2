@@ -15,7 +15,7 @@ include_once "nav.inc";
 include_once("db.php"); 
            $q = $_POST["quantity"];
 
-           $query="Select productname, quantity as "Alert ones" from inventory WHERE quantity < 10 ";
+           $query="Select productname, quantity as "Those items nearly run out" from inventory WHERE quantity < 10 ";
 ?>
 
 

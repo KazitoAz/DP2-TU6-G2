@@ -17,6 +17,7 @@
 		<li><h3>Predict Monthly Sales Record</h3></li>
 		<li><a href ="predict_monthly_sales_record_fe.php" title="Predict for one item" id="nav">One Item</a></li>
 		<li><a href ="predict_monthly_sales_record_for_similaritem.php" title="Predict for one kind" id="nav">One Kind</a></li>
+		<li><a href ="alert.php" title="Alert items running out" id="nav">Alert</a></li>
 		
 		
 		</ul>

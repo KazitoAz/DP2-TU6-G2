@@ -9,14 +9,15 @@
 	</head>
    <body>
 <?php
-include_once "header.inc";
-include_once "nav.inc";
+include("header.inc");
+include("nav.inc");
 ?>
 
 		<form action="Predict_monthly_sales_record_for_similaritem.php" method="post">
 			<fieldset>
 				<p>
-				<label for='ItemName'>Choose Item kind that you want</label>
+				<label for='ItemName'>Choose Item kind that you want</label>\
+				</p>
 				<p>
 					<label for='ItemName'>Item</label>
 					<input id='ItemName' name='ItemName' type='text' required='required' pattern="^[a-zA-Z]+$"/>
@@ -31,7 +32,7 @@ include_once "nav.inc";
 				<input type="reset" value="Reset"/>
 				</p>
 			</fieldset>
-		</form>
+		
 
 <?php 
 include_once("db.php"); 
@@ -39,10 +40,19 @@ if(isset($_POST["submit"]))
     {
            $c = $_POST["category"];
 
-           $query="Select convert(varchar(7), date, 23) [datetime], avg(quantity) as "Monthly Sales in furture" from salesrecord WHERE category='$c'";
+           $query="Select convert(varchar(7), GETDATE(), 23) [datetime], avg(quantity) as "Monthly Sales in furture" from salesrecord WHERE category='$c'";
+
+            $result = mysqli_query($conn, $query);
+		if(!$result) {
+			echo "<p class=\"wrong\">Something is wrong with",   $query,"</p>";
+		} else {
+			echo "<p class=\"ok\">Successfully doing prediction</p>";
+		}
+		
+		mysqli_close($conn);
 ?>
 
-
+</form>
 
    </body>
 </html>

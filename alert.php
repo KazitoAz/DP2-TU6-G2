@@ -13,11 +13,7 @@ include("header.inc");
 include("nav.inc");
 
 include_once("db_Connection.php"); 
-           $name = trim($_POST["product_name"]);
-	$quantity = trim($_POST["quantity"]);
-	$supplier = trim($_POST["supplier"]);
-	$contact = trim($_POST["contact"]);
-	$address = trim($_POST["address"]);
+          
 	
            $query="Select productname, quantity from inventory WHERE quantity < 10 ";
 ?>

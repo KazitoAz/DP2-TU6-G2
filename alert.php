@@ -9,8 +9,8 @@
 	</head>
    <body>
 <?php
-include(header.inc);
-include(nav.inc);
+include("header.inc");
+include("nav.inc");
 
 include_once("db.php"); 
            $name = trim($_POST["product_name"]);

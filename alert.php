@@ -12,7 +12,7 @@
 include("header.inc");
 include("nav.inc");
 
-include_once("db.php"); 
+include_once("db_Connection.php"); 
            $name = trim($_POST["product_name"]);
 	$quantity = trim($_POST["quantity"]);
 	$supplier = trim($_POST["supplier"]);

@@ -40,7 +40,7 @@ if(isset($_POST["submit"]))
     {
            $c = $_POST["category"];
 
-           $query="Select convert(varchar(7), GETDATE(), 23) [datetime], avg(quantity) as "Monthly Sales in furture" from salesrecord WHERE category='$c'";
+           $query="Select convert(varchar(7), GETDATE(), 23) [datetime], avg(quantity) from salesrecord WHERE category='$c'";
 
             $result = mysqli_query($conn, $query);
 		if(!$result) {

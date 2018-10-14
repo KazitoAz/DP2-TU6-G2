@@ -9,12 +9,12 @@
 	</head>
    <body>
 <?php
-include_once "header.inc";
-include_once "nav.inc";
+include("header.inc");
+include("nav.inc");
 
-include_once("db.php"); 
-           $q = $_POST["quantity"];
-
+include_once("db_Connection.php"); 
+          
+	
            $query="Select productname, quantity from inventory WHERE quantity < 10 ";
 ?>
 
